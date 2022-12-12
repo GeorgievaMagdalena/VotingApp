@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_100">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AdministratorQuestions">
+
+    <TextView
+        android:id="@+id/AdminTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="Administrator View"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/AdminTitleQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="35dp"
+        android:text="Add poll question and the answers options"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/setDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTitleQ"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="Set the starting date of the voting:"
+        />
+
+    <EditText
+        android:id="@+id/setStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/setDateText"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTitleQ"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="10dp"
+        android:hint="ex. 10.11.2022"
+
+    />
+
+
+    <TextView
+        android:id="@+id/setTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setDateText"
+        android:paddingBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Set the starting time of the voting: "
+        />
+
+    <EditText
+        android:id="@+id/setStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/setTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/setStartDate"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="10dp"
+        android:hint="ex. 00:00"
+
+        />
+
+    <TextView
+        android:id="@+id/setEndDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTimeText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="17dp"
+        android:paddingBottom="10dp"
+        android:text="Set the ending date of the voting:"
+        />
+
+    <EditText
+        android:id="@+id/setEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/setEndDateText"
+        app:layout_constraintTop_toBottomOf="@+id/setStartTime"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="10dp"
+        android:hint="ex. 03.02.2023"
+
+        />
+
+    <TextView
+        android:id="@+id/setEndTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setEndDateText"
+        android:paddingBottom="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="17dp"
+        android:text="Set the ending time of the voting: "
+        />
+
+
+    <EditText
+        android:id="@+id/setEndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/setEndTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/setEndDate"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="10dp"
+        android:hint="ex. 23:59"
+
+        />
+
+
+    <TextView
+        android:id="@+id/addVoteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setEndTimeText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Add poll question below"
+        />
+
+    <EditText
+        android:id="@+id/VoteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addVoteText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp"
+        android:lines="3"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <TextView
+        android:id="@+id/addVotingOpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VoteText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Add poll options below"
+        />
+
+    <EditText
+        android:id="@+id/Option1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addVotingOpt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="45dp"
+        android:lines="2"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <EditText
+        android:id="@+id/Option2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addVotingOpt"
+        app:layout_constraintLeft_toRightOf="@+id/Option1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:lines="2"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <EditText
+        android:id="@+id/Option3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addVotingOpt"
+        app:layout_constraintLeft_toRightOf="@+id/Option2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:lines="2"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+    <EditText
+        android:id="@+id/Option4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Option1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="95dp"
+        android:lines="2"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <EditText
+        android:id="@+id/Option5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Option2"
+        app:layout_constraintLeft_toRightOf="@+id/Option4"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:lines="2"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <Button
+        android:id="@+id/addPollQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Option5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="7dp"
+        android:text="Add Poll Question"
+        android:onClick="AddQuestion"
+        />
+
+    <Button
+        android:id="@+id/viewQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/addPollQuestion"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="7dp"
+        android:text="View Questions"
+        android:onClick="ViewQuestions"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

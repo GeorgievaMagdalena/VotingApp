@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/purple_100"
+        tools:context=".AdministratorMain">
+
+        <TextView
+            android:id="@+id/AdminTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="30dp"
+            android:text="Administrator View"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            />
+
+        <Button
+            android:id="@+id/goToQuestions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdminTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="goToAddQuestion"
+            android:text="Add poll question"
+            />
+
+
+        <Button
+            android:id="@+id/goToActiveResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/goToQuestions"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"
+            android:onClick="goToActiveResults"
+            android:text="View results of a voting"
+            />
+
+
+        <Button
+            android:id="@+id/goToMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/goToActiveResult"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"
+            android:onClick="goToMap"
+            android:text="View map of users location"
+            />
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/VotersLocation"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/VoteResult2"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:paddingBottom="20dp"-->
+<!--            android:paddingTop="30dp"-->
+<!--            android:text="Voting Area"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

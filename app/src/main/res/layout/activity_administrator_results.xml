@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdministratorResults"
+    android:background="@color/purple_100">
+
+    <TextView
+        android:id="@+id/AdminTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="30dp"
+        android:text="Administrator View"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/ActiveVotingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="30dp"
+        android:text="Active voting res"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:id="@+id/VotingResultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ActiveVotingTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Choose poll result"
+        />
+
+
+    <Button
+        android:id="@+id/VoteResult1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/VotingResultText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="7dp"
+        android:text="Results 1"
+        />
+
+    <Button
+        android:id="@+id/VoteResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/VotingResultText"
+        app:layout_constraintLeft_toRightOf="@+id/VoteResult1"
+        android:layout_marginLeft="5dp"
+        android:text="Results 2"
+        />
+
+    <Button
+        android:id="@+id/VoteResult3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/VotingResultText"
+        app:layout_constraintLeft_toRightOf="@+id/VoteResult2"
+        android:layout_marginLeft="5dp"
+        android:text="Results 3"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
