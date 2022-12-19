@@ -27,7 +27,11 @@
         android:textSize="17dp"
         android:background="@color/purple_500"
         android:textColor="@color/white"
+        android:onClick="goToMyPolls"
         />
+
+
+
     <Button
         android:id="@+id/Results"
         android:layout_width="150dp"
@@ -66,9 +70,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/PollQuestionsTitle"
-
-
-
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

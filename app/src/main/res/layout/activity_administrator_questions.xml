@@ -41,115 +41,35 @@
         />
 
     <TextView
-        android:id="@+id/setDateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AdminTitleQ"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:paddingBottom="10dp"
-        android:text="Set the starting date of the voting:"
-        />
-
-    <EditText
-        android:id="@+id/setStartDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/setDateText"
-        app:layout_constraintTop_toBottomOf="@+id/AdminTitleQ"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="225dp"
-        android:layout_marginRight="10dp"
-        android:hint="ex. 10.11.2022"
-
-    />
-
-
-    <TextView
-        android:id="@+id/setTimeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setDateText"
-        android:paddingBottom="7dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:text="Set the starting time of the voting: "
-        />
-
-    <EditText
-        android:id="@+id/setStartTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/setTimeText"
-        app:layout_constraintTop_toBottomOf="@+id/setStartDate"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="225dp"
-        android:layout_marginRight="10dp"
-        android:hint="ex. 00:00"
-
-        />
-
-    <TextView
-        android:id="@+id/setEndDateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setTimeText"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="17dp"
-        android:paddingBottom="10dp"
-        android:text="Set the ending date of the voting:"
-        />
-
-    <EditText
-        android:id="@+id/setEndDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/setEndDateText"
-        app:layout_constraintTop_toBottomOf="@+id/setStartTime"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="225dp"
-        android:layout_marginRight="10dp"
-        android:hint="ex. 03.02.2023"
-
-        />
-
-    <TextView
         android:id="@+id/setEndTimeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setEndDateText"
+        app:layout_constraintTop_toBottomOf="@+id/AdminTitleQ"
         android:paddingBottom="7dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="17dp"
-        android:text="Set the ending time of the voting: "
+        android:text="Set the the duration of the voting in minutes: "
         />
 
 
     <EditText
         android:id="@+id/setEndTime"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/setEndTimeText"
-        app:layout_constraintTop_toBottomOf="@+id/setEndDate"
+        android:hint="ex. 10"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="225dp"
-        android:layout_marginRight="10dp"
-        android:hint="ex. 23:59"
-
-        />
-
+        app:layout_constraintTop_toBottomOf="@+id/setEndTimeText" />
 
     <TextView
         android:id="@+id/addVoteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/setEndTime"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setEndTimeText"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:text="Add poll question below"
@@ -187,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/addVotingOpt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="45dp"
+        android:layout_marginLeft="30dp"
         android:lines="2"
         android:padding="5dp"
         android:background="@drawable/border"
@@ -225,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Option1"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="95dp"
+        android:layout_marginLeft="85dp"
         android:lines="2"
         android:padding="5dp"
         android:background="@drawable/border"
@@ -252,21 +172,50 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="7dp"
-        android:text="Add Poll Question"
+        android:text="Save"
         android:onClick="AddQuestion"
         />
 
-    <Button
-        android:id="@+id/viewQuestions"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/placeLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/addPollQuestion"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+    <Button
+        android:id="@+id/anotherQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="AnotherQuestion"
+        android:text="Add a second Question"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="7dp"
-        android:text="View Questions"
-        android:onClick="ViewQuestions"
-        />
+        app:layout_constraintTop_toBottomOf="@id/placeLayout" />
+
+    <LinearLayout
+        android:id="@+id/placeLayoutThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/anotherQuestion"
+        android:orientation="vertical"
+        ></LinearLayout>
+
+    <Button
+        android:id="@+id/QuestionThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="QuestionThree"
+        android:text="Add a third Question"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anotherQuestion" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

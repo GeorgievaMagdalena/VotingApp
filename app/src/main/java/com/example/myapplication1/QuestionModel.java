@@ -2,10 +2,6 @@ package com.example.myapplication1;
 
 public class QuestionModel {
     private int id1;
-    private String startDate;
-    private String startTime;
-    private String endDate;
-    private String endTime;
     private String question;
     private String option1;
     private String option2;
@@ -13,12 +9,8 @@ public class QuestionModel {
     private String option4;
     private String option5;
 
-    public QuestionModel(int id, String startDate, String startTime, String endDate, String endTime, String question, String option1, String option2, String option3, String option4, String option5) {
+    public QuestionModel(int id, String question, String option1, String option2, String option3, String option4, String option5) {
         this.id1 = id;
-        this.startDate = startDate;
-        this.startTime = startTime;
-        this.endDate = endDate;
-        this.endTime = endTime;
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -34,10 +26,6 @@ public class QuestionModel {
     public String toString() {
         return "QuestionModel{" +
                 "id=" + id1 +
-                ", startDate=" + startDate +
-                ", startTime=" + startTime +
-                ", endDate=" + endDate +
-                ", endTime=" + endTime +
                 ", question='" + question + '\'' +
                 ", option1='" + option1 + '\'' +
                 ", option2='" + option2 + '\'' +
@@ -53,38 +41,6 @@ public class QuestionModel {
 
     public void setId1(int id) {
         this.id1 = id;
-    }
-
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
-
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
     }
 
     public String getQuestion() {

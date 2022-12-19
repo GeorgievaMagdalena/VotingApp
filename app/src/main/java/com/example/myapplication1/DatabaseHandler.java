@@ -23,10 +23,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static final String TABLE_POLL="questions_data";
     private static final String COLUMN_IDP="id1";
-    private static final String COLUMN_SDATE="startdate";
-    private static final String COLUMN_STIME="starttime";
-    private static final String COLUMN_EDATE="enddate";
-    private static final String COLUMN_ETIME="endtime";
     private static final String COLUMN_QUESTION="question";
     private static final String COLUMN_OPTION1="option1";
     private static final String COLUMN_OPTION2="option2";
@@ -44,7 +40,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(" CREATE TABLE "+TABLE_NAME+" ( "+COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COLUMN_NAME+" TEXT, "+ COLUMN_SURNAME+" TEXT, "+ COLUMN_USERNAME+" TEXT, "+ COLUMN_EMAIL+" TEXT, "+ COlUMN_PASSWORD+" TEXT) ");
-        db.execSQL(" CREATE TABLE "+TABLE_POLL+" ( "+COLUMN_IDP+" INTEGER PRIMARY KEY AUTOINCREMENT, "+COLUMN_SDATE+" TEXT, "+ COLUMN_STIME+" TEXT, "+COLUMN_EDATE+" TEXT, "+ COLUMN_ETIME+" TEXT, "+ COLUMN_QUESTION+" TEXT, "+COLUMN_OPTION1+" TEXT, "+COLUMN_OPTION2+" TEXT, "+COLUMN_OPTION3+" TEXT, "+COLUMN_OPTION4+" TEXT, "+COLUMN_OPTION5+" TEXT) ");
+        db.execSQL(" CREATE TABLE "+TABLE_POLL+" ( "+COLUMN_IDP+" INTEGER PRIMARY KEY AUTOINCREMENT, "+ COLUMN_QUESTION+" TEXT, "+COLUMN_OPTION1+" TEXT, "+COLUMN_OPTION2+" TEXT, "+COLUMN_OPTION3+" TEXT, "+COLUMN_OPTION4+" TEXT, "+COLUMN_OPTION5+" TEXT) ");
     }
 
     @Override
@@ -88,10 +84,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues cval=new ContentValues();
 
         //cval.put(COLUMN_IDP, qm.getId1());
-        cval.put(COLUMN_SDATE, qm.getStartDate());
-        cval.put(COLUMN_STIME, qm.getStartTime());
-        cval.put(COLUMN_EDATE, qm.getEndDate());
-        cval.put(COLUMN_ETIME, qm.getEndTime());
         cval.put(COLUMN_QUESTION, qm.getQuestion());
         cval.put(COLUMN_OPTION1, qm.getOption1());
         cval.put(COLUMN_OPTION2, qm.getOption2());

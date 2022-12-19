@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/questionsLayoutNew"
+    android:background="@color/purple_100"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/addVoteText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Add poll question below" />
+
+    <EditText
+        android:id="@+id/VoteText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:lines="3"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        />
+
+    <TextView
+        android:id="@+id/addVotingOpt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Add poll options below"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/Option12"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:lines="2"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            />
+
+        <EditText
+            android:id="@+id/Option22"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:lines="2"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            />
+
+        <EditText
+            android:id="@+id/Option32"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:lines="2"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/Option42"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="85dp"
+            android:lines="2"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            />
+
+        <EditText
+            android:id="@+id/Option52"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:lines="2"
+            android:padding="5dp"
+            android:background="@drawable/border"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/addPollQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:text="Save"
+        android:onClick="AddQuestion1"
+        />
+
+
+</LinearLayout>
